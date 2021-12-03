@@ -4,11 +4,10 @@ const Webpack = require('webpack');
 const glob = require('globby');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
+const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 
 const src = path.resolve('./src');
 const packagePath = path.join(src, 'package.json');
-const package = require(packagePath);
 
 module.exports = env => {
     const entryGlob = [
@@ -69,6 +68,7 @@ module.exports = env => {
         devtool: 'source-map',
         plugins: [
             new Webpack.ProgressPlugin(),
+            new FixStyleOnlyEntriesPlugin(),
             new MiniCssExtractPlugin({
                 filename: '[name].css',
                 chunkFilename: '[name].css'
