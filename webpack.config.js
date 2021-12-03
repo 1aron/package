@@ -12,7 +12,7 @@ const package = require(packagePath);
 
 module.exports = env => {
     const entryGlob = [
-        path.join(src, '**/index.{ts,js}')
+        path.join(src, '**/index.scss')
     ];
 
     return {
@@ -26,49 +26,12 @@ module.exports = env => {
             }
             return entrypoint;
         }, {}),
-        externals: [
-            ...Object.keys(package.peerDependencies || []),
-            ...Object.keys(package.dependencies || [])
-        ],
         mode: 'production',
-        resolve: {
-            extensions: ['.js', '.ts', '.mjs'],
-            modules: [src, path.resolve('./node_modules')]
-        },
         optimization: {
-            minimize: true,
-            minimizer: [
-                new TerserPlugin({
-                    terserOptions: {
-                        format: {
-                            comments: false,
-                        },
-                    },
-                    extractComments: false,
-                }),
-            ],
+            minimize: true
         },
         module: {
             rules: [
-                {
-                    test: /\.ts$/,
-                    loader: 'ts-loader',
-                    options: {
-                        configFile: path.resolve('./tsconfig.json')
-                    }
-                },
-                {
-                    test: /\.m?js$/,
-                    exclude: /(node_modules|bower_components)/,
-                    use: [
-                        {
-                            loader: 'babel-loader',
-                            options: {
-                                babelrc: true
-                            }
-                        }
-                    ]
-                },
                 {
                     test: /index\.(sass|scss|css)$/,
                     use: [
@@ -101,9 +64,7 @@ module.exports = env => {
             ]
         },
         output: {
-            clean: true,
-            libraryTarget: 'umd',
-            globalObject: 'this'
+            clean: true
         },
         devtool: 'source-map',
         plugins: [
