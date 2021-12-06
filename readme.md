@@ -12,7 +12,7 @@ Please follow the naming conventions:
 - Util Package suffixs: `.util`
 - Pipe Package suffixs: `.pipe`
 
-## 2. Choose and clone
+## 2. Choose then clone
 ### 📦 Standard Package ( CSS & JS )
 ```sh
 git clone -b standard https://github.com/master-style/package.git $PACKAGE_NAME
@@ -35,4 +35,12 @@ git remote remove origin
 git remote add origin https://github.com/master-style/$PACKAGE_NAME.git
 git remote add package https://github.com/master-style/package.git
 git checkout -b main
+```
+# Update
+```sh
+cd master/$PROJECT_NAME # go your project first
+```
+
+```sh
+npm run update
 ```
