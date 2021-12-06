@@ -1,10 +1,15 @@
+###### CONTENTS
+[Create](#create)
+[Models](#models)
+[Scripts](#scripts)
+
 # Create
 The following example is creating Master org's package:
 ```sh
 cd master
 ```
 ## 1. Naming your package
-Give the suffix `.css` or `.util` or `.pipe` or not according to the design pattern of your package, e.g `PACKAGE_NAME=capitalize.util` : 
+Give the suffix `.css` or `.util` or `.pipe` or not according to the design model of your package, e.g `PACKAGE_NAME=capitalize.util` : 
 
 Copy and enter package name to terminal: 
 ```properties
@@ -39,6 +44,8 @@ git remote add package https://github.com/master-style/package.git
 # return to the main branch
 git checkout -b main
 ```
+
+# Models
 
 # Scripts
 | script            | description                          |
