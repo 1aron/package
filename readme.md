@@ -29,10 +29,14 @@ git clone -b js https://github.com/master-style/package.git $PACKAGE_NAME
 `gh auth login`, if you have not logged in yet. [Github CLI Installation | Github](https://github.com/cli/cli#installation)
 ```sh
 cd $PACKAGE_NAME
+# create a github repository
 gh repo create master-style/$PACKAGE_NAME --public
+# reset origin
 git remote remove origin
 git remote add origin https://github.com/master-style/$PACKAGE_NAME.git
+# add package remote
 git remote add package https://github.com/master-style/package.git
+# return to the main branch
 git checkout -b main
 ```
 
