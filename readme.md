@@ -1,17 +1,18 @@
 ###### CONTENTS
-- [Create](#create)
+- [Setup](#setup)
   - [1. Naming your package](#1-naming-your-package)
   - [2. Choose a package then clone](#2-choose-a-package-then-clone)
     - [📦 Standard Package ( CSS & JS )](#-standard-package--css--js-)
     - [📦 CSS Package](#-css-package)
     - [📦 JS Package](#-js-package)
   - [3. Configure remote and branch](#3-configure-remote-and-branch)
+  - [4. Set up CI](#4-set-up-ci)
 - [Models](#models)
   - [Util](#util)
   - [Pipe](#pipe)
 - [Scripts](#scripts)
 
-# Create
+# Setup
 The following example is creating Master org's package:
 ```sh
 cd master
@@ -53,7 +54,14 @@ git remote add origin https://github.com/master-style/$PACKAGE_NAME.git
 git remote add package https://github.com/master-style/package.git
 # return to the main branch
 git checkout -b main
+# push
+git push origin main
 ```
+
+## 4. Set up CI
+[Adding projects | CircleCI Docs](https://circleci.com/docs/2.0/project-build/#adding-projects)
+
+> For the admin, opening [Master Style | CircleCI](https://app.circleci.com/projects/project-dashboard/github/master-style/) page and `Set Up Project`
 
 # Models
 ⌨️ copy and paste to your `src/index.ts`
