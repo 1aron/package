@@ -1,3 +1,9 @@
+| script            | description                          |
+|-------------------|--------------------------------------|
+| `npm run update`  | update package environment to latest |
+| `npm run build`   | output your production to `dist`     |
+| `npm run release` | release version via semantic release |
+
 # Create
 The following example is creating Master org's package:
 ```sh
@@ -35,12 +41,4 @@ git remote remove origin
 git remote add origin https://github.com/master-style/$PACKAGE_NAME.git
 git remote add package https://github.com/master-style/package.git
 git checkout -b main
-```
-# Update
-```sh
-cd master/$PROJECT_NAME # go your project first
-```
-
-```sh
-npm run update:env
 ```
