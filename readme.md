@@ -7,9 +7,6 @@
     - [📦 JS Package](#-js-package)
   - [3. Configure remote and branch](#3-configure-remote-and-branch)
   - [4. Set up CI](#4-set-up-ci)
-- [Models](#models)
-  - [Util](#util)
-  - [Pipe](#pipe)
 - [Scripts](#scripts)
 
 # Setup
@@ -62,26 +59,6 @@ git push origin main
 [Adding projects | CircleCI Docs](https://circleci.com/docs/2.0/project-build/#adding-projects)
 
 > For the admin, opening [Master Style | CircleCI](https://app.circleci.com/projects/project-dashboard/github/master-style/) page and `Set Up Project`
-
-# Models
-⌨️ copy and paste to your `src/index.ts`
-
-## Util
-```ts
-export function fn(target) {}
-```
-
-## Pipe
-```ts
-export class Pipe {
-    constructor(
-        private options?: { [key: string]: any }
-    ) { }
-    transform(target) {
-        return;
-    }
-}
-```
 
 # Scripts
 | script            | description                          |
