@@ -15,7 +15,7 @@ The following example is creating Master org's package:
 cd master
 ```
 ## 1. Naming your package
-Give the suffix `.css` or `.util` or `.pipe` or not according to the design model of your package, e.g `PACKAGE_NAME=capitalize.util` : 
+Give the suffix `.css` or `.util` or not according to the design model of your package, e.g `PACKAGE_NAME=to-upper-case.util` : 
 
 ⌨️ copy and enter package name to terminal: 
 ```properties
