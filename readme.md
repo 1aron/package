@@ -40,7 +40,7 @@ git clone -b js https://github.com/master-style/package.git $PACKAGE_NAME
 ```
 
 ## 3. Configure remote and branch
-`gh auth login`, if you have not logged in yet. <a href="https://github.com/cli/cli#installation" target="_blank">Github CLI Installation | Github</a>
+`gh auth login`, if you have not logged in yet. [Github CLI Installation | Github](https://github.com/cli/cli#installation)
 
 ⌨️ copy and paste to terminal:
 ```sh
