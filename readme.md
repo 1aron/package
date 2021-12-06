@@ -1,12 +1,16 @@
 # Create
+The following example is creating Master org's package:
+```sh
+cd master # go master folder first
+```
 ## 1. Naming your package
 ```properties
 PACKAGE_NAME=
 ```
 Please follow the naming conventions:
-- CSS Package: `name.css`
-- Util Package: `name.util`
-- Pipe Package: `name.pipe`
+- CSS Package suffixs: `.css`
+- Util Package suffixs: `.util`
+- Pipe Package suffixs: `.pipe`
 
 ## 2. Choose and clone
 ### 📦 Standard Package ( CSS & JS )
