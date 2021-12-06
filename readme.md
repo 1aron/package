@@ -40,7 +40,7 @@ git clone -b js https://github.com/master-style/package.git $PACKAGE_NAME
 ```
 
 ## 3. Configure remote and branch
-`gh auth login`, if you have not logged in yet. [Github CLI Installation | Github](https://github.com/cli/cli#installation){:target="_blank"}
+`gh auth login`, if you have not logged in yet. <a href="https://github.com/cli/cli#installation" target="_blank">Github CLI Installation | Github</a>
 
 ⌨️ copy and paste to terminal:
 ```sh
@@ -59,9 +59,9 @@ git push origin main
 ```
 
 ## 4. Set up CI
-[Adding projects | CircleCI Docs](https://circleci.com/docs/2.0/project-build/#adding-projects){:target="_blank"}
+[Adding projects | CircleCI Docs](https://circleci.com/docs/2.0/project-build/#adding-projects)
 
-> For the admin, opening [Master Style | CircleCI](https://app.circleci.com/projects/project-dashboard/github/master-style/){:target="_blank"} page and `Set Up Project`
+> For the admin, opening [Master Style | CircleCI](https://app.circleci.com/projects/project-dashboard/github/master-style/) page and `Set Up Project`
 
 # Models
 ⌨️ copy and paste to your `src/index.ts`
