@@ -36,3 +36,10 @@ git remote add origin https://github.com/master-style/$PACKAGE_NAME.git
 git remote add package https://github.com/master-style/package.git
 git checkout -b main
 ```
+
+# Scripts
+| script            | description                          |
+|-------------------|--------------------------------------|
+| `npm run update`  | update package environment to latest |
+| `npm run build`   | output your production to `dist`     |
+| `npm run release` | release version via semantic release |
