@@ -42,5 +42,5 @@ cd master/$PROJECT_NAME # go your project first
 ```
 
 ```sh
-npm run update
+npm run update:env
 ```
