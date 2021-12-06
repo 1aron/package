@@ -1,9 +1,3 @@
-| script            | description                          |
-|-------------------|--------------------------------------|
-| `npm run update`  | update package environment to latest |
-| `npm run build`   | output your production to `dist`     |
-| `npm run release` | release version via semantic release |
-
 # Create
 The following example is creating Master org's package:
 ```sh
