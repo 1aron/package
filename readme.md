@@ -8,11 +8,11 @@
     - [📦 CSS Package](#-css-package)
     - [📦 JS Package](#-js-package)
   - [3. Go to the cloned folder](#3-go-to-the-cloned-folder)
-  - [4. Remove cloned package origin](#4-remove-cloned-package-origin)
+  - [4. Reset cloned to `package` origin](#4-reset-cloned-to-package-origin)
   - [5. Add a github repository and your origin](#5-add-a-github-repository-and-your-origin)
     - [Org repository](#org-repository)
     - [Personal repository](#personal-repository)
-  - [6. Reset origin and branch to new repository](#6-reset-origin-and-branch-to-new-repository)
+  - [6. Checkout from package to main branch](#6-checkout-from-package-to-main-branch)
   - [7. Push created package to repository](#7-push-created-package-to-repository)
   - [8. Set up CI](#8-set-up-ci)
 - [Scripts](#scripts)
@@ -62,9 +62,10 @@ git clone -b js https://github.com/master-style/package.git $PACKAGE_NAME
 cd $PACKAGE_NAME
 ```
 
-## 4. Remove cloned package origin
+## 4. Reset cloned to `package` origin
 ```sh
 git remote remove origin
+git remote add package https://github.com/master-style/package.git
 ```
 
 ## 5. Add a github repository and your origin
@@ -87,9 +88,8 @@ gh repo create $PACKAGE_NAME --public
 git remote add origin https://github.com/$USERNAME/$PACKAGE_NAME.git
 ```
 
-## 6. Reset origin and branch to new repository
+## 6. Checkout from package to main branch
 ```sh
-git remote add package https://github.com/master-style/package.git
 git checkout -b main
 ```
 
