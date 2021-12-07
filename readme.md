@@ -11,7 +11,7 @@
   - [4. Reset cloned to `package` origin](#4-reset-cloned-to-package-origin)
   - [5. Add a github repository and your origin](#5-add-a-github-repository-and-your-origin)
     - [Org repository](#org-repository)
-    - [Personal repository](#personal-repository)
+    - [User repository](#user-repository)
   - [6. Checkout from package to main branch](#6-checkout-from-package-to-main-branch)
   - [7. Push created package to repository](#7-push-created-package-to-repository)
   - [8. Set up CI](#8-set-up-ci)
@@ -81,7 +81,7 @@ gh repo create $ORG_NAME/$PACKAGE_NAME --public
 git remote add origin https://github.com/$ORG_NAME/$PACKAGE_NAME.git
 ```
 
-### Personal repository
+### User repository
 Set your github `$USERNAME=` variable first
 ```sh
 gh repo create $PACKAGE_NAME --public
