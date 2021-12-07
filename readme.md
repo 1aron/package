@@ -14,8 +14,8 @@
     - [User repository](#user-repository)
   - [6. Checkout from package to main branch](#6-checkout-from-package-to-main-branch)
   - [7. Create `src/package.json` for npm](#7-create-srcpackagejson-for-npm)
-  - [9. Push created package to repository](#9-push-created-package-to-repository)
-  - [8. Set up CI](#8-set-up-ci)
+  - [8. Push created package to repository](#8-push-created-package-to-repository)
+  - [9. Set up CI](#9-set-up-ci)
 - [Scripts](#scripts)
 
 # Setup
@@ -98,15 +98,16 @@ git checkout -b main
 ```sh
 cd src
 npm init
+git add .
 git commit -m 'init npm package'
 ```
 
-## 9. Push created package to repository
+## 8. Push created package to repository
 ```sh
 git push origin main
 ```
 
-## 8. Set up CI
+## 9. Set up CI
 [Adding projects | CircleCI Docs](https://circleci.com/docs/2.0/project-build/#adding-projects)
 
 > For the admin, opening [Master Style | CircleCI](https://app.circleci.com/projects/project-dashboard/github/master-style/) page and `Set Up Project`
