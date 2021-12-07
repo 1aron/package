@@ -13,7 +13,8 @@
     - [Org repository](#org-repository)
     - [User repository](#user-repository)
   - [6. Checkout from package to main branch](#6-checkout-from-package-to-main-branch)
-  - [7. Push created package to repository](#7-push-created-package-to-repository)
+  - [7. Create `src/package.json` for npm](#7-create-srcpackagejson-for-npm)
+  - [9. Push created package to repository](#9-push-created-package-to-repository)
   - [8. Set up CI](#8-set-up-ci)
 - [Scripts](#scripts)
 
@@ -93,7 +94,14 @@ git remote add origin https://github.com/$USERNAME/$PACKAGE_NAME.git
 git checkout -b main
 ```
 
-## 7. Push created package to repository
+## 7. Create `src/package.json` for npm
+```sh
+cd src
+npm init
+git commit -m 'init npm package'
+```
+
+## 9. Push created package to repository
 ```sh
 git push origin main
 ```
