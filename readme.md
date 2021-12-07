@@ -18,12 +18,13 @@
 - [Scripts](#scripts)
 
 # Setup
+[Quick set up for master org package | document](https://www.notion.so/aoyue/Quick-set-up-for-master-org-package-f4452dd7ee1c468fa72c2ba8a2d524e3)
 
 ## 1. Preset variable for quick
 Give the suffix `.css` or `.util` or not according to the design model of your package, e.g `PACKAGE_NAME=to-upper-case.util` : 
 
 ### Package name
-```ps
+```sh
 # Mac Terminal
 PACKAGE_NAME=
 
