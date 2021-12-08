@@ -30,3 +30,6 @@ npm install {{ package.name }}
 - [unpkg](https://unpkg.com/{{ package.name }})
 
 # Usage
+```css
+@import '{{ package.name }}';
+```
