@@ -1,7 +1,8 @@
 {
     "scripts": {
         "update": "git fetch package css && git merge package/css",
-        "build": "npm i && cd src && npm i && cd ../ && webpack"
+        "build": "npm i --production && cd src && npm i && cd .. && webpack --config webpack.prod.js",
+        "serve": "cd src && npm i && cd .. && npm i && webpack serve --config webpack.dev.js"
     },
     "dependencies": {
         "autoprefixer": "^10.4.0",
@@ -16,6 +17,10 @@
         "webpack": "^5.64.4",
         "webpack-cli": "^4.9.1",
         "webpack-fix-style-only-entries": "^0.6.1"
+    },
+    "devDependencies": {
+        "html-webpack-plugin": "^5.5.0",
+        "webpack-dev-server": "^4.6.0"
     },
     "files": [
         "dist"
