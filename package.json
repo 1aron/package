@@ -2,7 +2,8 @@
     "scripts": {
         "update": "git fetch package css && git merge package/css",
         "build": "npm i --production && cd src && npm i && cd .. && webpack --config webpack.prod.js",
-        "serve": "cd src && npm i && cd .. && npm i && webpack serve --config webpack.dev.js"
+        "serve": "cd src && npm i && cd .. && npm i && webpack serve --config webpack.dev.js",
+        "update:readme": "m package render README.md"
     },
     "dependencies": {
         "autoprefixer": "^10.4.0",
@@ -20,7 +21,8 @@
     },
     "devDependencies": {
         "html-webpack-plugin": "^5.5.0",
-        "webpack-dev-server": "^4.6.0"
+        "webpack-dev-server": "^4.6.0",
+        "@master/cli": "^1.0.0-alpha.12"
     },
     "files": [
         "dist"
