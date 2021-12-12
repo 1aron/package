@@ -22,7 +22,30 @@ module.exports = {
             '../src/**/*'
         ],
     },
-    module: common.module,
+    module: {
+        rules: [
+            ...common.module,
+            {
+                test: /\.ts$/,
+                loader: 'ts-loader',
+                options: {
+                    configFile: path.resolve('./tsconfig.json')
+                }
+            },
+            {
+                test: /\.m?js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: [
+                    {
+                        loader: 'babel-loader',
+                        options: {
+                            babelrc: true
+                        }
+                    }
+                ]
+            }
+        ]
+    },
     plugins: [
         new webpack.ProgressPlugin(),
         new HtmlWebpackPlugin({
