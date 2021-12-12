@@ -35,9 +35,9 @@ module.exports = {
         minimize: true
     },
     module: {
-        rules: {
+        rules: [
             ...cssConfig.module.rules
-        }
+        ]
     },
     output: {
         clean: true
