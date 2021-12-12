@@ -1,6 +1,6 @@
 const webpack = require('webpack');
-const path = require('path');
-const common = require('./webpack.common');
+const cssConfig = require('./webpack.common.css');
+const jsConfig = require('./webpack.common.js');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const master = require('./master.json');
 
@@ -8,9 +8,9 @@ module.exports = {
     mode: 'development',
     entry: './dev/src/index.ts',
     resolve: {
-        extensions: common.resolve.extensions,
+        extensions: jsConfig.resolve.extensions,
         modules: [
-            ...common.resolve.modules,
+            ...jsConfig.resolve.modules,
             './dev/node_modules'
         ]
     },
@@ -24,30 +24,8 @@ module.exports = {
     },
     module: {
         rules: [
-            ...common.module.rules,
-            {
-                test: /\.ts$/,
-                loader: 'ts-loader',
-                options: {
-                    configFile: path.resolve(
-                        process.env.WEBPACK_SERVE
-                            ? './dev/tsconfig.dev.json'
-                            : './tsconfig.json'
-                    )
-                }
-            },
-            {
-                test: /\.m?js$/,
-                exclude: /(node_modules|bower_components)/,
-                use: [
-                    {
-                        loader: 'babel-loader',
-                        options: {
-                            babelrc: true
-                        }
-                    }
-                ]
-            }
+            ...jsConfig.module.rules,
+            ...cssConfig.module.rules
         ]
     },
     plugins: [
@@ -57,6 +35,7 @@ module.exports = {
             favicon: './dev/src/favicon.png',
             template: './dev/src/index.html'
         }),
-        ...common.plugins
+        ...jsConfig.plugins,
+        ...cssConfig.plugins
     ]
 }

@@ -1,4 +1,5 @@
-const common = require('./webpack.common.js');
+const cssConfig = require('./webpack.common.css');
+const jsConfig = require('./webpack.common.js');
 const path = require('path');
 const webpack = require('webpack');
 const glob = require('globby');
@@ -24,7 +25,7 @@ module.exports = {
         }
         return entrypoint;
     }, {}),
-    resolve: common.resolve,
+    resolve: jsConfig.resolve,
     externals: [
         ...Object.keys(package.peerDependencies || []),
         ...Object.keys(package.dependencies || [])
@@ -34,7 +35,9 @@ module.exports = {
         minimize: true
     },
     module: {
-        rules: common.module.rules
+        rules: {
+            ...cssConfig.module.rules
+        }
     },
     output: {
         clean: true
@@ -50,6 +53,6 @@ module.exports = {
             ],
         }),
         new FixStyleOnlyEntriesPlugin(),
-        ...common.plugins
+        ...cssConfig.plugins
     ]
 }

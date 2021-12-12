@@ -1,12 +1,7 @@
 const path = require('path');
-const src = path.join('./src');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-    resolve: {
-        extensions: ['.js', '.ts', '.mjs'],
-        modules: [src, path.join('./node_modules')]
-    },
     module: {
         rules: [
             {
