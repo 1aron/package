@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const path = require('path');
 const common = require('./webpack.common');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const master = require('./master.json');
@@ -24,7 +25,7 @@ module.exports = {
     },
     module: {
         rules: [
-            ...common.module,
+            ...common.module.rules,
             {
                 test: /\.ts$/,
                 loader: 'ts-loader',
