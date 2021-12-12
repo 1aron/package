@@ -20,9 +20,9 @@
         "webpack-fix-style-only-entries": "^0.6.1"
     },
     "devDependencies": {
+        "@master/cli": "^1.0.0-alpha.16",
         "html-webpack-plugin": "^5.5.0",
-        "webpack-dev-server": "^4.6.0",
-        "@master/cli": "^1.0.0-alpha.12"
+        "webpack-dev-server": "^4.6.0"
     },
     "files": [
         "dist"
