@@ -2,6 +2,10 @@
 <p align="center">
     <img src="https://raw.githubusercontent.com/master-style/package/document/images/logo-and-text.svg" alt="logo" width="142">
 </p>
+<p align="center">
+    <b>Package</b>
+</p>
+<p align="center">A getting started open-source project with webpack.</p>
 
 ###### CONTENTS
 - [Setup](#setup)
